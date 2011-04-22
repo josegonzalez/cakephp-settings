@@ -1,0 +1,8 @@
+Package: settings
+Source: git://github.com/josegonzalez/settings.git
+Type: plugin
+Section: component
+Description: a simple plugin to track application settings
+Pre-depends: CakePHP==1.3
+Homepage: http://github.com/josegonzalez/settings
+Bugs: http://github.com/josegonzalez/settings/issues
