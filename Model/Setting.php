@@ -1,9 +1,9 @@
 <?php
 class Setting extends SettingsAppModel {
-	var $name = 'Setting';
+	public $name = 'Setting';
 
-	function __construct($id = false, $table = null, $ds = null) {
-		parent::__construct($id, $table, $ds);
+	public function __construct($id = false, $table = null, $ds = null) {
+		parent::__construct();
 		$this->validate = array(
 			'key' => array(
 				'notempty' => array(

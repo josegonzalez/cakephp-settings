@@ -1,5 +1,5 @@
 <?php
-class SettingsComponent extends Object {
+class SettingsComponent extends Component {
 	
 /**
  * Loads the settings from the cache/database, writes them to cache,
