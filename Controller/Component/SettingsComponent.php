@@ -11,8 +11,7 @@ class SettingsComponent extends Component {
 	function initialize(&$controller) {
 		$_settings = array();
 		if (($_settings = Cache::read('settings')) === false) {
-			$controller->loadModel('Settings.Setting');
-			$_settings = $controller->Setting->find('all');
+			$_settings = ClassRegistry::init('Settings.Setting')->find('all');
 			Cache::write('settings', $_settings);
 		}
 		foreach($_settings as $_setting) {
