@@ -1,4 +1,4 @@
-# Settings Plugin
+# Settings Plugin 2.0
 
 A simple plugin to track application settings
 
