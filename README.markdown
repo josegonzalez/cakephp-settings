@@ -1,46 +1,56 @@
-h1. Settings Plugin
+# Settings Plugin
 
 A simple plugin to track application settings
 
-h2. Background
+## Background
 
 I needed to store application-level settings in the database, and rather than do a gigantic run-around in the AppController that was not only bulky, but untestable, I created the settings plugin to manage it all within a Component.
 
-h2. Requirements
+## Requirements
 
-* CakePHP 1.3
+* CakePHP 2.x
 
-h2. Installation
+## Installation
+
+For 1.3 support, please see the [1.3 branch](https://github.com/josegonzalez/settings/tree/1.3).
 
 _[Manual]_
 
-# Download this: http://github.com/josegonzalez/settings/zipball/master
-# Unzip that download.
-# Copy the resulting folder to app/plugins
-# Rename the folder you just copied to @settings@
+* Download this: [http://github.com/josegonzalez/settings/zipball/master](http://github.com/josegonzalez/settings/zipball/master)
+* Unzip that download.
+* Copy the resulting folder to `app/Plugin`
+* Rename the folder you just copied to `Settings`
 
 _[GIT Submodule]_
 
 In your app directory type:
-<pre><code>git submodule add git://github.com/josegonzalez/settings.git plugins/settings
-git submodule init
-git submodule update
-</code></pre>
+
+	git submodule add git://github.com/josegonzalez/settings.git Plugin/Settings
+	git submodule init
+	git submodule update
+
 
 _[GIT Clone]_
 
-In your plugin directory type
-<pre><code>git clone git://github.com/josegonzalez/settings.git settings</code></pre>
+In your `Plugin` directory type:
 
-h2. Usage
+	git clone git://github.com/josegonzalez/settings.git `Settings`
 
-Simply run the included schema shell to setup the @settings@ table
+### Enable plugin
 
-h2. Todo
+In 2.0 you need to enable the plugin your `app/Config/bootstrap.php` file:
+
+	CakePlugin::load('Settings');
+
+If you are already using `CakePlugin::loadAll();`, then this is not necessary.
+
+Als, run the included schema shell to setup the `settings` table.
+
+## Todo
 
 * Unit tests
 
-h2. License
+## License
 
 Copyright (c) 2010-2011 Jose Diaz-Gonzalez
 
